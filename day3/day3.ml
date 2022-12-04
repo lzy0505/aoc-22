@@ -41,7 +41,6 @@ let rec read l acc idx =
     else if mod3 = 1 then
       (check_second l s; read l acc (idx + 1))
     else
-      (* print_string ("THIRD" ^ (string_of_int idx) ^ "\n"); *)
       read (create_init ()) (acc + check_third l s) (idx + 1)
 
 let _ = read (create_init ()) 0 0
